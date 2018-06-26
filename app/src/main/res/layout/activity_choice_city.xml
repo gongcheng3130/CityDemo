@@ -1,0 +1,115 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_main"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <RelativeLayout
+        android:id="@+id/station_search_rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/city_iv_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@null"
+            android:padding="12.5dp"
+            android:src="@mipmap/icon_back" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="25dp"
+            android:padding="7dp" >
+
+            <EditText
+                android:id="@+id/city_et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:background="@drawable/shape_bg_white_bd_gray_x1_c4"
+                android:hint="输入城市关键词"
+                android:textColorHint="@color/text_hint_light_gray"
+                android:lines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="40dp"
+                android:textColor="@color/text_main_black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/city_iv_clean"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:padding="3dp"
+                android:layout_marginRight="5dp"
+                android:contentDescription="@null"
+                android:src="@mipmap/icon_close" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/divider_dark_gray" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ListView
+            android:id="@+id/city_lv_city_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:divider="@null"/>
+
+        <ListView
+            android:id="@+id/city_lv_search_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:visibility="gone" />
+
+        <com.cheng.citydemo.util.SideBar
+            android:id="@+id/sideBar"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/transparent_white_alpha_00"/>
+
+        <TextView
+            android:id="@+id/choice_citv_tv_flag"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:visibility="gone"
+            android:alpha="0.5"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:background="@color/text_blue"/>
+
+        <TextView
+            android:id="@+id/city_tv_search_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:paddingTop="50dp"
+            android:background="@color/white"
+            android:textColor="@color/text_main_dark_gray"
+            android:textSize="20sp"
+            android:text="没有搜索结果~"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>
