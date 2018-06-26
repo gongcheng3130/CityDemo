@@ -28,7 +28,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class ChoiceCityActivity extends AppCompatActivity implements View.OnClickListener, CarCityClickListener{
+public class ChoiceCityActivity extends AppCompatActivity implements View.OnClickListener, CityClickListener {
 
     private ImageView city_iv_back;
     private EditText city_et_search;

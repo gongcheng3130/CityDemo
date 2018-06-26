@@ -5,7 +5,7 @@ import com.cheng.citydemo.bean.City;
 /**
  * Created by rongyu on 2017/9/19.
  */
-public interface CarCityClickListener {
+public interface CityClickListener {
 
     void location();
 

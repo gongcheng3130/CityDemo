@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.cheng.citydemo.CarCityClickListener;
+import com.cheng.citydemo.CityClickListener;
 import com.cheng.citydemo.R;
 import com.cheng.citydemo.bean.City;
 import java.util.ArrayList;
@@ -17,12 +17,12 @@ import java.util.List;
 public class CityHotAdapter extends BaseAdapter {
 
     private Context context;
-    private CarCityClickListener listener;
+    private CityClickListener listener;
     private LayoutInflater inflater;
     public boolean isShowHot;
     private List<City> lists = new ArrayList<>();
 
-    public CityHotAdapter(Context context, CarCityClickListener listener, boolean isShowHot, List<City> lists){
+    public CityHotAdapter(Context context, CityClickListener listener, boolean isShowHot, List<City> lists){
         this.context = context;
         this.listener = listener;
         this.isShowHot = isShowHot;

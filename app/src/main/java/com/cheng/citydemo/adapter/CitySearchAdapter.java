@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-import com.cheng.citydemo.CarCityClickListener;
+import com.cheng.citydemo.CityClickListener;
 import com.cheng.citydemo.R;
 import com.cheng.citydemo.bean.City;
 import java.util.ArrayList;
@@ -15,11 +15,11 @@ import java.util.List;
 public class CitySearchAdapter extends BaseAdapter {
 
     private Context context;
-    private CarCityClickListener listener;
+    private CityClickListener listener;
     private LayoutInflater inflater;
     private List<City> lists = new ArrayList<>();
 
-    public CitySearchAdapter(Context context, CarCityClickListener listener){
+    public CitySearchAdapter(Context context, CityClickListener listener){
         this.context = context;
         this.listener = listener;
         this.inflater = LayoutInflater.from(context);

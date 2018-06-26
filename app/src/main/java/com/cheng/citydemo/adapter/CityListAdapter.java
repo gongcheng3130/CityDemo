@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
-import com.cheng.citydemo.CarCityClickListener;
+import com.cheng.citydemo.CityClickListener;
 import com.cheng.citydemo.util.MyGridView;
 import com.cheng.citydemo.R;
 import com.cheng.citydemo.bean.AllCity;
@@ -19,7 +19,7 @@ public class CityListAdapter extends BaseAdapter {
 
     private static final int VIEW_TYPE_COUNT = 3;
     private Context mContext;
-    private CarCityClickListener listener;
+    private CityClickListener listener;
     private LayoutInflater inflater;
     private boolean isShowHot;
     public City local = new City("定位中");
@@ -29,7 +29,7 @@ public class CityListAdapter extends BaseAdapter {
     private ArrayList<AllCity> all = new ArrayList<>();
     private List<String> litter = new ArrayList<>();
 
-    public CityListAdapter(Context mContext, CarCityClickListener listener){
+    public CityListAdapter(Context mContext, CityClickListener listener){
         this.mContext = mContext;
         this.listener = listener;
         setHot(new ArrayList<City>(), false);
